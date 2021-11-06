@@ -42,6 +42,7 @@ def check(curr_arr, x, y):
             return 1
         return 0
 
+
 while True:
 
     surface.fill(pygame.Color('black'))
@@ -53,7 +54,7 @@ while True:
     for x in range(1, w - 1):
         for y in range(1, h - 1):
             if curr_arr[y][x] == 2:
-                pygame.draw.rect(surface, pygame.Color('red'), (x * tile + 2, y * tile + 2, tile - 2, tile -2))
+                pygame.draw.rect(surface, pygame.Color('red'), (x * tile + 2, y * tile + 2, tile - 2, tile - 2))
             if curr_arr[y][x] == 1:
                 pygame.draw.rect(surface, pygame.Color('green'), (x * tile + 2, y * tile + 2, tile - 2, tile - 2))
             next_arr[y][x] = check(curr_arr, x, y)
